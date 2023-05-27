@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DecksListComponent } from './components/decks/decks-list/decks-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddDeckComponent } from './components/decks/add-deck/add-deck.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DecksListComponent
+    DecksListComponent,
+    AddDeckComponent
   ],
   imports: [
     BrowserModule,

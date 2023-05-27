@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DecksListComponent } from './components/decks/decks-list/decks-list.component';
+import { AddDeckComponent } from './components/decks/add-deck/add-deck.component';
 
 const routes: Routes = [
   {
@@ -10,6 +11,10 @@ const routes: Routes = [
   {
     path: 'decks',
     component: DecksListComponent
+  },
+  {
+    path: 'decks/add',
+    component: AddDeckComponent
   }
 ];
 
