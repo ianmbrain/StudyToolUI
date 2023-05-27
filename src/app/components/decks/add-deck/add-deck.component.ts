@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Deck } from 'src/app/models/deck.model';
 import { DecksService } from 'src/app/services/decks.service';
 
@@ -14,7 +15,7 @@ export class AddDeckComponent implements OnInit {
     description: ''
   };
 
-  constructor(private decksService: DecksService) { }
+  constructor(private decksService: DecksService, private router: Router) { }
 
   ngOnInit(): void {
     
@@ -25,5 +26,7 @@ export class AddDeckComponent implements OnInit {
     .subscribe({
       next:(request) => { }
     });
+
+    this.router.navigate(['decks']);
   }
 }
