@@ -16,4 +16,8 @@ export class DecksService {
   getAllDecks(): Observable<Deck[]> {
     return this.http.get<Deck[]>(this.baseApiUrl + '/api/deck');
   }
+
+  addDeck(addDeckRequest: Deck) {
+    return this.http.post(this.baseApiUrl + '/api/deck', addDeckRequest);
+  }
 }

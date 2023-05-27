@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DecksListComponent } from './components/decks/decks-list/decks-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddDeckComponent } from './components/decks/add-deck/add-deck.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AddDeckComponent } from './components/decks/add-deck/add-deck.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
