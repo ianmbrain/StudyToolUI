@@ -6,6 +6,7 @@
             <th scope="col">Id</th>
             <th scope="col">Title</th>
             <th scope="col">Description</th>
+            <th> </th>
           </tr>
         </thead>
         <tbody>
@@ -13,6 +14,7 @@
                 <td>{{ deck.id }}</td>
                 <td>{{ deck.title }}</td>
                 <td>{{ deck.description }}</td>
+                <td><a [routerLink]="['decks', 'edit', deck.id]">Deck</a></td>
             </tr>
         </tbody>
       </table>

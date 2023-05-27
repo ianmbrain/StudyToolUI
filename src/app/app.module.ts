@@ -7,12 +7,14 @@ import { DecksListComponent } from './components/decks/decks-list/decks-list.com
 import { HttpClientModule } from '@angular/common/http';
 import { AddDeckComponent } from './components/decks/add-deck/add-deck.component';
 import { FormsModule } from '@angular/forms';
+import { EditDeckComponent } from './components/decks/edit-deck/edit-deck.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DecksListComponent,
-    AddDeckComponent
+    AddDeckComponent,
+    EditDeckComponent
   ],
   imports: [
     BrowserModule,
