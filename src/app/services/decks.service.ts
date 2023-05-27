@@ -28,4 +28,8 @@ export class DecksService {
   updateDeck(id: number | null | undefined, updateDeckRequest: Deck) {
     return this.http.put(this.baseApiUrl + '/api/deck/' + id, updateDeckRequest);
   }
+
+  deleteDeck(id: number | null | undefined) {
+    return this.http.delete(this.baseApiUrl + '/api/deck/' + id);
+  }
 }

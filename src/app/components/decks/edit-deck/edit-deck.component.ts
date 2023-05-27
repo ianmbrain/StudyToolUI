@@ -43,4 +43,13 @@ export class EditDeckComponent implements OnInit {
       }
     });
   }
+
+  deleteDeck(id: number | null | undefined) {
+    this.decksService.deleteDeck(id)
+    .subscribe({
+      next: (respones) => {
+        this.router.navigate(['decks']);
+      }
+    })
+  }
 }
