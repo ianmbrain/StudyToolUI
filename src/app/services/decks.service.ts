@@ -20,4 +20,12 @@ export class DecksService {
   addDeck(addDeckRequest: Deck) {
     return this.http.post(this.baseApiUrl + '/api/deck', addDeckRequest);
   }
+
+  getDeck(id: number): Observable<Deck> {
+    return this.http.get<Deck>(this.baseApiUrl + '/api/deck/' + id);
+  }
+
+  updateDeck(id: number | null | undefined, updateDeckRequest: Deck) {
+    return this.http.put(this.baseApiUrl + '/api/deck/' + id, updateDeckRequest);
+  }
 }
