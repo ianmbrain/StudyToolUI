@@ -1,1 +1,19 @@
-<p>decks-list works!</p>
+<div class="container my-5">
+    <h1 class="mb-3">Decks</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let deck of decks">
+                <td>{{ deck.id }}</td>
+                <td>{{ deck.title }}</td>
+                <td>{{ deck.description }}</td>
+            </tr>
+        </tbody>
+      </table>
+</div>
