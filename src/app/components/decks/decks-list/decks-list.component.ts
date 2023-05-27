@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Deck } from 'src/app/models/deck.model';
+import { DecksService } from 'src/app/services/decks.service';
 
 @Component({
   selector: 'app-decks-list',
@@ -8,24 +9,18 @@ import { Deck } from 'src/app/models/deck.model';
 })
 export class DecksListComponent implements OnInit {
 
-  decks: Deck[] = [
-    {
-      id: 1,
-      title: 'deck 1',
-      description: 'description 1'
-    },
-    {
-      id: 2,
-      title: 'deck 2',
-      description: 'description 2'
-    }
-  ];
+  decks: Deck[] = [];
 
-  constructor() {
+  constructor(private decksService: DecksService) {
 
   }
 
   ngOnInit(): void {
-    this.decks.push();
+    this.decksService.getAllDecks()
+    .subscribe({
+      next: (decks) => {
+        this.decks = decks;
+      }
+    });
   }
 }
