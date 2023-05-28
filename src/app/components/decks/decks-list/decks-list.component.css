@@ -1,0 +1,15 @@
+#deckDiv {
+    width: 800px;
+    max-width: 80%;
+    margin-left: 10%;
+}
+
+#deckTitleDiv {
+    width: 800px;
+    max-width: 80%;
+    margin-left: 10%;
+}
+
+#addDeckBtn {
+    margin-left: 10%;
+}
