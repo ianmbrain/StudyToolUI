@@ -6,6 +6,7 @@ import { EditDeckComponent } from './components/decks/edit-deck/edit-deck.compon
 import { CategoryListComponent } from './components/categories/category-list/category-list.component';
 import { AddCategoryComponent } from './components/categories/add-category/add-category.component';
 import { EditCategoryComponent } from './components/categories/edit-category/edit-category.component';
+import { CardListComponent } from './components/cards/card-list/card-list.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'categories/edit/:id',
     component: EditCategoryComponent
+  },
+  {
+    path: 'cards',
+    component: CardListComponent
   }
 ];
 
