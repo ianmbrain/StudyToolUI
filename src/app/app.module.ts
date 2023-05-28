@@ -9,6 +9,7 @@ import { AddDeckComponent } from './components/decks/add-deck/add-deck.component
 import { FormsModule } from '@angular/forms';
 import { EditDeckComponent } from './components/decks/edit-deck/edit-deck.component';
 import { CategoryListComponent } from './components/categories/category-list/category-list.component';
+import { AddCategoryComponent } from './components/categories/add-category/add-category.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CategoryListComponent } from './components/categories/category-list/cat
     DecksListComponent,
     AddDeckComponent,
     EditDeckComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    AddCategoryComponent
   ],
   imports: [
     BrowserModule,
