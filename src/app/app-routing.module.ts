@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DecksListComponent } from './components/decks/decks-list/decks-list.component';
 import { AddDeckComponent } from './components/decks/add-deck/add-deck.component';
 import { EditDeckComponent } from './components/decks/edit-deck/edit-deck.component';
+import { CategoryListComponent } from './components/categories/category-list/category-list.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,11 @@ const routes: Routes = [
   {
     path: 'decks/edit/:id',
     component: EditDeckComponent
-  }
+  },
+  {
+    path: 'categories',
+    component: CategoryListComponent
+  },
 ];
 
 @NgModule({

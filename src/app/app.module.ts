@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddDeckComponent } from './components/decks/add-deck/add-deck.component';
 import { FormsModule } from '@angular/forms';
 import { EditDeckComponent } from './components/decks/edit-deck/edit-deck.component';
+import { CategoryListComponent } from './components/categories/category-list/category-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DecksListComponent,
     AddDeckComponent,
-    EditDeckComponent
+    EditDeckComponent,
+    CategoryListComponent
   ],
   imports: [
     BrowserModule,
