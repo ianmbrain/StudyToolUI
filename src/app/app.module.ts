@@ -12,6 +12,7 @@ import { CategoryListComponent } from './components/categories/category-list/cat
 import { AddCategoryComponent } from './components/categories/add-category/add-category.component';
 import { EditCategoryComponent } from './components/categories/edit-category/edit-category.component';
 import { CardListComponent } from './components/cards/card-list/card-list.component';
+import { AddCardComponent } from './components/cards/add-card/add-card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CardListComponent } from './components/cards/card-list/card-list.compon
     CategoryListComponent,
     AddCategoryComponent,
     EditCategoryComponent,
-    CardListComponent
+    CardListComponent,
+    AddCardComponent
   ],
   imports: [
     BrowserModule,
