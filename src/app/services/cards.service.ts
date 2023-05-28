@@ -28,4 +28,8 @@ export class CardsService {
   updateCard(id: number | undefined, updatedCardRequest: Card) {
     return this.http.put(this.baseApiUrl + '/api/card/' + id, updatedCardRequest);
   }
+
+  deleteCard(id: number | undefined) {
+    return this.http.delete(this.baseApiUrl + '/api/card/' + id);
+  }
 }

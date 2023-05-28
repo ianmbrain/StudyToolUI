@@ -43,4 +43,13 @@ export class EditCardComponent {
       }
     });
   }
+
+  deleteCard(id: number  | undefined) {
+    this.cardsService.deleteCard(id)
+    .subscribe({
+      next: (respones) => {
+        this.router.navigate(['cards']);
+      }
+    })
+  }
 }
