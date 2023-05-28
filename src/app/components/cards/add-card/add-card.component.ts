@@ -1,3 +1,4 @@
+import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Card } from 'src/app/models/card.model';
@@ -16,6 +17,9 @@ export class AddCardComponent implements OnInit {
     important: false
   };
 
+  deckId: Number = 1;
+  categoryId: Number = 1;
+
   constructor(private cardsService: CardsService, private router: Router) { }
 
   ngOnInit(): void {
@@ -23,7 +27,7 @@ export class AddCardComponent implements OnInit {
   }
 
   addCard() {
-    this.cardsService.addDeck(this.addCardRequest)
+    this.cardsService.addCard(this.deckId, this.categoryId, this.addCardRequest)
     .subscribe({
       next:(request) => { }
     });

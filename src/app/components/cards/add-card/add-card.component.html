@@ -11,10 +11,23 @@
                     <label for="description" class="form-label">Description</label>
                     <input type="text" class="form-control" id="description" name="description" [(ngModel)] = "addCardRequest.description">
                   </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="important">Important</label>
+                    <select class="form-select" id="important" type="boolean" name="important" [(ngModel)] = "addCardRequest.important">
+                      <option selected>Choose...</option>
+                      <option [ngValue]=false>False</option>
+                      <option [ngValue]=true>True</option>
+                    </select>
+                  </div>
                 <div class="mb-3">
-                    <label for="important" class="form-label">Importance</label>
-                    <input type="text" class="form-control" id="important" name="important" [(ngModel)] = "addCardRequest.important">
+                  <label for="deck" class="form-label">Deck</label>
+                  <input type="number" class="form-control" id="deck" name="deck" [(ngModel)] = "deckId">
                 </div>
+                <div class="mb-3">
+                  <label for="category" class="form-label">Category</label>
+                  <input type="number" class="form-control" id="category" name="category" [(ngModel)] = "categoryId">
+                </div>
+
                 <button type="submit" class="btn btn-primary">Create Card</button>
               </form>
         </div>
