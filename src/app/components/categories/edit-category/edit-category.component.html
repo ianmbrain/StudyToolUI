@@ -4,17 +4,20 @@
         <div class="col-6">
             <form #form="ngForm" (ngSubmit)="updateCategory()">
                 <div class="mb-3">
-                    <label for="id" class="form-label">Id</label>
-                    <input type="number" class="form-control" id="id" readonlyname="id" [(ngModel)] = "categoryDetails.id">
-                  </div>
-                <div class="mb-3">
                   <label for="name" class="form-label">Name</label>
                   <input type="text" class="form-control" id="name" name="name" [(ngModel)] = "categoryDetails.name">
                 </div>
                 <div class="mb-3">
-                    <label for="color" class="form-label">Color</label>
-                    <input type="number" class="form-control" id="color" name="color" [(ngModel)] = "categoryDetails.color">
-                  </div>
+                <label class="form-label" for="color">Color</label>
+                <select class="form-select" id="color" type="number" name="color" [(ngModel)] = "categoryDetails.color">
+                    <option selected>Choose...</option>
+                    <option [ngValue]=0>Red</option>
+                    <option [ngValue]=1>Green</option>
+                    <option [ngValue]=2>Blue</option>
+                    <option [ngValue]=3>Yellow</option>
+                    <option [ngValue]=4>Orange</option>
+                </select>
+                </div>
                 <button type="submit" class="btn btn-primary">Save</button>
               </form>
         </div>
