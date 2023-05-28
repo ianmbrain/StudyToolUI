@@ -7,7 +7,7 @@
             <th scope="col">Title</th>
             <th scope="col">Description</th>
             <th scope="col">Important</th>
-            <!--<th> </th>-->
+            <th> </th>
           </tr>
         </thead>
         <tbody>
@@ -16,7 +16,7 @@
                 <td>{{ card.term }}</td>
                 <td>{{ card.description }}</td>
                 <td>{{ card.important }}</td>
-                <!--<td><a [routerLink]="['/decks', 'edit', deck.id]">Edit</a></td>-->
+                <td><a [routerLink]="['/cards', 'edit', card.id]">Edit</a></td>
             </tr>
         </tbody>
       </table>

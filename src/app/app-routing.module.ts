@@ -8,6 +8,7 @@ import { AddCategoryComponent } from './components/categories/add-category/add-c
 import { EditCategoryComponent } from './components/categories/edit-category/edit-category.component';
 import { CardListComponent } from './components/cards/card-list/card-list.component';
 import { AddCardComponent } from './components/cards/add-card/add-card.component';
+import { EditCardComponent } from './components/cards/edit-card/edit-card.component';
 
 const routes: Routes = [
   {
@@ -45,7 +46,11 @@ const routes: Routes = [
   {
     path: 'cards/add',
     component: AddCardComponent
-  }
+  },
+  {
+    path: 'cards/edit/:id',
+    component: EditCardComponent
+  },
 ];
 
 @NgModule({

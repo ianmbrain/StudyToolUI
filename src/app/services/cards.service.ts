@@ -20,4 +20,12 @@ export class CardsService {
   addCard(deckId: Number, categoryId: Number, addCardRequest: Card) {
     return this.http.post(this.baseApiUrl + '/api/card?deckId=' + deckId + '&categoryId=' + categoryId, addCardRequest);
   }
+
+  getCard(id: number): Observable<Card> {
+    return this.http.get<Card>(this.baseApiUrl + '/api/card/' + id);
+  }
+
+  updateCard(id: number | undefined, updatedCardRequest: Card) {
+    return this.http.put(this.baseApiUrl + '/api/card/' + id, updatedCardRequest);
+  }
 }
