@@ -42,4 +42,13 @@ export class EditCategoryComponent {
       }
     });
   }
+
+  deleteCategory(id: number | undefined) {
+    this.categoriesService.deleteCategory(id)
+    .subscribe({
+      next: (respones) => {
+        this.router.navigate(['categories']);
+      }
+    })
+  }
 }

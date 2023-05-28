@@ -28,4 +28,8 @@ export class CategoriesService {
   updateCategory(id: number | undefined, updateCategoryRequest: Category) {
     return this.http.put(this.baseApiUrl + '/api/category/' + id, updateCategoryRequest);
   }
+
+  deleteCategory(id: number | undefined) {
+    return this.http.delete(this.baseApiUrl + '/api/category/' + id);
+  }
 }
