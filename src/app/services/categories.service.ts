@@ -17,7 +17,15 @@ export class CategoriesService {
     return this.http.get<Category[]>(this.baseApiUrl + '/api/category');
   }
 
+  getCategory(id: number): Observable<Category> {
+    return this.http.get<Category>(this.baseApiUrl + '/api/category/' + id);
+  }
+
   addCategory(addCategoryRequest: Category) {
     return this.http.post(this.baseApiUrl + '/api/category', addCategoryRequest);
+  }
+
+  updateCategory(id: number | undefined, updateCategoryRequest: Category) {
+    return this.http.put(this.baseApiUrl + '/api/category/' + id, updateCategoryRequest);
   }
 }
