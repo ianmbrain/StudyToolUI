@@ -1,15 +1,19 @@
 #cardGrid {
-    width: 900px;
+    width: 800px;
     max-width: 80%;
-    margin-left: 10%;
+    margin-left: 16%;
     margin-bottom: 10%;
 }
 
 #deckCard {
-    max-width: 275px;
-    height: 250px;
+    max-width: 350px;
+    height: 500px;
 }
 
 #cardBackground {
     background: rgba(13, 110, 253, 0.1);
+}
+
+#cardHeader {
+    text-align: right;
 }

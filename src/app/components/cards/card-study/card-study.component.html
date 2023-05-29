@@ -1,16 +1,11 @@
 <div id="cardGrid">
     <h1 class="my-3">Cards</h1>
-    <a id="addDeckBtn" [routerLink]="['/cards', 'add', deckCardId]" class="btn btn-primary btn-lg mb-3">Add Card</a>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col" *ngFor="let card of cards">
-        <div class="card h-100">
-          <h5 class="card-header bg-primary text-white">{{ card.term }}</h5>
+    <a id="addDeckBtn" (click)="nextItem()" class="btn btn-primary btn-lg mb-3">Next Card</a>
+        <div id="deckCard" class="card">
+          <h5 id="cardHeader" class="card-header bg-primary text-white">Card: {{currentIndex}}/{{cards.length - 1}}</h5>
           <div id="cardBackground" class="card-body">
-            <h6 class="card-subtitle mb-2 text-body-secondary">Important: {{ card.important }}</h6>
-            <p class="card-text">{{ card.description }}</p>
-            <a id="editDeckBtn" [routerLink]="['/cards', 'edit', card.id]" class="btn btn-primary">Edit</a>
+            <h6 class="card-subtitle mb-2 text-body-secondary" *ngIf="currentCard.important == true">Important</h6>
+            <h5 class="card-text">{{ currentCard.description }}</h5>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+</div>

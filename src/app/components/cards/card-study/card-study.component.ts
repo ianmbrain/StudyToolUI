@@ -11,11 +11,13 @@ import { DecksService } from 'src/app/services/decks.service';
 export class CardStudyComponent {
   
   cards: Card[] = [];
+  currentIndex: number = 0;
+  currentCard: Card;
 
   deckCardId: Number = 0;
 
   constructor(private decksService: DecksService, private route: ActivatedRoute,) {
-
+    this.currentCard = this.cards[this.currentIndex];
   }
 
   ngOnInit(): void {
@@ -35,5 +37,12 @@ export class CardStudyComponent {
         }
       }
     })
+  }
+
+  nextItem() {
+    if (this.currentIndex < this.cards.length - 1) {
+      this.currentIndex++;
+      this.currentCard = this.cards[this.currentIndex];
+    }
   }
 }
