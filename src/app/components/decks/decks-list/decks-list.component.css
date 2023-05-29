@@ -17,3 +17,7 @@
 #editDeckBtn {
     margin-right: 5px;
 }
+
+#deckCardBackground {
+    background: rgba(13, 110, 253, 0.1);
+}
