@@ -11,6 +11,7 @@ import { AddCardComponent } from './components/cards/add-card/add-card.component
 import { EditCardComponent } from './components/cards/edit-card/edit-card.component';
 import { DeckCardsComponent } from './components/decks/deck-cards/deck-cards.component';
 import { AddDeckCardComponent } from './components/decks/add-deck-card/add-deck-card.component';
+import { CardStudyComponent } from './components/cards/card-study/card-study.component';
 
 const routes: Routes = [
   {
@@ -60,6 +61,10 @@ const routes: Routes = [
   {
     path: 'cards/edit/:id',
     component: EditCardComponent
+  },
+  {
+    path: 'cards/study/:deckId',
+    component: CardStudyComponent
   },
 ];
 

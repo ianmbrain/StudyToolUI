@@ -4,7 +4,8 @@
   <div *ngFor="let deck of decks">
     <div class="card mb-3" id="deckDiv">
       <div class="card-header bg-primary text-white">
-        {{ deck.id }}
+        Deck Id: {{ deck.id }}
+        <a id="studyDeckBtn" [routerLink]="['/cards', 'study', deck.id]" class="btn btn-light">Study Deck</a>
       </div>
       <div id="deckCardBackground" class="card-body">
         <h5 class="card-title">{{ deck.title }}</h5>
