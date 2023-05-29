@@ -1,23 +1,15 @@
-<div class="container my-5">
-    <h1 class="mb-3">Cards</h1>
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Title</th>
-            <th scope="col">Description</th>
-            <th scope="col">Important</th>
-            <th> </th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let card of cards">
-                <td>{{ card.id }}</td>
-                <td>{{ card.term }}</td>
-                <td>{{ card.description }}</td>
-                <td>{{ card.important }}</td>
-                <td><a [routerLink]="['/cards', 'edit', card.id]">Edit</a></td>
-            </tr>
-        </tbody>
-      </table>
+<div id="cardGrid">
+  <h1 class="my-3">Cards</h1>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let card of cards">
+      <div class="card h-100">
+        <h5 class="card-header bg-primary text-white">{{ card.term }}</h5>
+        <div class="card-body bg-primary">
+          <h6 class="card-subtitle mb-2 text-body-secondary text-white">Important: {{ card.important }}</h6>
+          <p class="card-text text-white">{{ card.description }}</p>
+          <a class="text-white" [routerLink]="['/cards', 'edit', card.id]">Edit</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
