@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
 import { Deck } from 'src/app/models/deck.model';
+import { Card } from '../models/card.model';
 
 @Injectable({
   providedIn: 'root'
@@ -31,5 +32,9 @@ export class DecksService {
 
   deleteDeck(id: number | null | undefined) {
     return this.http.delete(this.baseApiUrl + '/api/deck/' + id);
+  }
+
+  getCardsOfDeck(deckId: number): Observable<Card[]> {
+    return this.http.get<Card[]>(this.baseApiUrl + '/api/decks/' + deckId);
   }
 }

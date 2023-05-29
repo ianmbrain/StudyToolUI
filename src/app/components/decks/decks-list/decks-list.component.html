@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 id="deckTitleDiv" class="my-5">Decks</h1>
+  <h1 id="deckTitleDiv" class="my-3">Decks</h1>
   <a id="addDeckBtn" [routerLink]="['/decks', 'add']" class="btn btn-primary btn-lg mb-3">Add Deck</a>
   <div *ngFor="let deck of decks">
     <div class="card mb-3" id="deckDiv">
@@ -9,7 +9,8 @@
       <div class="card-body">
         <h5 class="card-title">{{ deck.title }}</h5>
         <p class="card-text">{{ deck.description }}</p>
-        <a [routerLink]="['/decks', 'edit', deck.id]" class="btn btn-primary">Edit</a>
+        <a id="editDeckBtn" [routerLink]="['/decks', 'edit', deck.id]" class="btn btn-primary">Edit</a>
+        <a [routerLink]="['/decks', deck.id]" class="btn btn-primary">Cards</a>
       </div>
     </div>
   </div>
