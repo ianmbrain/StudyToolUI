@@ -39,6 +39,6 @@ export class AddDeckCardComponent {
       next:(request) => { }
     });
 
-    this.router.navigate(['decks']);
+    this.router.navigate(['/decks', this.deckId]);
   }
 }
