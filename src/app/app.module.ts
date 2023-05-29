@@ -15,6 +15,7 @@ import { CardListComponent } from './components/cards/card-list/card-list.compon
 import { AddCardComponent } from './components/cards/add-card/add-card.component';
 import { EditCardComponent } from './components/cards/edit-card/edit-card.component';
 import { DeckCardsComponent } from './components/decks/deck-cards/deck-cards.component';
+import { AddDeckCardComponent } from './components/decks/add-deck-card/add-deck-card.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DeckCardsComponent } from './components/decks/deck-cards/deck-cards.com
     CardListComponent,
     AddCardComponent,
     EditCardComponent,
-    DeckCardsComponent
+    DeckCardsComponent,
+    AddDeckCardComponent
   ],
   imports: [
     BrowserModule,

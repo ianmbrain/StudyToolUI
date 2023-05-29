@@ -12,6 +12,8 @@ export class DeckCardsComponent {
 
   cards: Card[] = [];
 
+  deckCardId: Number = 0;
+
   constructor(private decksService: DecksService, private route: ActivatedRoute,) {
 
   }
@@ -22,6 +24,8 @@ export class DeckCardsComponent {
         const deckId = params.get('deckId');
 
         if(deckId) {
+          this.deckCardId = parseInt(deckId);
+          
           this.decksService.getCardsOfDeck(parseInt(deckId))
           .subscribe({
             next: (cards) => {
