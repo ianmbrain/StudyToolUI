@@ -1,12 +1,10 @@
 #cardGrid {
-    width: 800px;
-    max-width: 80%;
     margin-left: 16%;
     margin-bottom: 10%;
 }
 
 #deckCard {
-    max-width: 350px;
+    width: 300px;
     height: 500px;
 }
 
@@ -16,4 +14,10 @@
 
 #cardHeader {
     text-align: right;
+    display: inline-block;
+}
+
+#nextCardBtn {
+    width:100px;
+    height: 500px;
 }

@@ -14,6 +14,8 @@ export class CardStudyComponent {
   currentIndex: number = 0;
   currentCard: Card;
 
+  descriptionBool: boolean = false;
+
   deckCardId: Number = 0;
 
   constructor(private decksService: DecksService, private route: ActivatedRoute,) {
@@ -43,6 +45,22 @@ export class CardStudyComponent {
     if (this.currentIndex < this.cards.length - 1) {
       this.currentIndex++;
       this.currentCard = this.cards[this.currentIndex];
+    }
+  }
+
+  prevItem() {
+    if (this.currentIndex >= 0) {
+      this.currentIndex--;
+      this.currentCard = this.cards[this.currentIndex];
+    }
+  }
+
+  flipCard() {
+    if(this.descriptionBool == false) {
+      this.descriptionBool = true;
+    }
+    else {
+      this.descriptionBool = false;
     }
   }
 }
