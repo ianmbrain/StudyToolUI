@@ -35,6 +35,6 @@ export class DecksService {
   }
 
   getCardsOfDeck(deckId: number): Observable<Card[]> {
-    return this.http.get<Card[]>(this.baseApiUrl + '/api/decks/' + deckId);
+    return this.http.get<Card[]>(this.baseApiUrl + '/decks/' + deckId);
   }
 }
