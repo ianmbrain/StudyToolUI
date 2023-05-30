@@ -4,7 +4,7 @@
 }
 
 #deckCard {
-    width: 300px;
+    width: 400px;
     height: 500px;
 }
 
@@ -17,7 +17,20 @@
     display: inline-block;
 }
 
+#btnContainer {
+    margin-left: 0px;
+    background: rgba(13, 110, 253, 0.1);
+    width: 398.5px;
+}
+
 #nextCardBtn {
-    width:100px;
-    height: 500px;
+    width: 100px;
+}
+
+#prevCardBtn {
+    width: 100px;
+}
+
+#flipCardBtn {
+    width: 100px;
 }
