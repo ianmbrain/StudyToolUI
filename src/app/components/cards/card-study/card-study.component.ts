@@ -44,6 +44,7 @@ export class CardStudyComponent {
   nextItem() {
     if (this.currentIndex < this.cards.length - 1) {
       this.currentIndex++;
+      this.descriptionBool = false;
       this.currentCard = this.cards[this.currentIndex];
     }
   }
@@ -51,6 +52,7 @@ export class CardStudyComponent {
   prevItem() {
     if (this.currentIndex >= 0) {
       this.currentIndex--;
+      this.descriptionBool = false;
       this.currentCard = this.cards[this.currentIndex];
     }
   }
