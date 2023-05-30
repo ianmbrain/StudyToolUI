@@ -11,7 +11,7 @@ import { DecksService } from 'src/app/services/decks.service';
 export class CardStudyComponent {
   
   cards: Card[] = [];
-  currentIndex: number = 0;
+  currentIndex: number = -1;
   currentCard: Card;
 
   descriptionBool: boolean = false;

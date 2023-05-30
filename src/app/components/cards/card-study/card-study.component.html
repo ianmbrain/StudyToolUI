@@ -1,9 +1,8 @@
 <div id="cardGrid" class="container">
     <h1 class="my-3">Cards</h1>
     <div id="deckCard" class="card">
-      <h5 id="cardHeader" ngClass="card-header text-white" [ngStyle]="{'background-color': currentCard.important ? 'rgba(240, 173, 78, 1)' : 'rgba(13, 110, 253, 1)'}">Card: {{currentIndex}}/{{cards.length - 1}}</h5>
+      <h5 id="cardHeader" ngClass="card-header text-white" [ngStyle]="{'background-color': currentCard.important ? 'rgba(240, 173, 78, 1)' : 'rgba(13, 110, 253, 1)'}">Card: {{currentIndex + 1}}/{{cards.length}}</h5>
       <div id="cardBackground" class="card-body">
-        <h6 class="card-subtitle text-body-secondary" *ngIf="currentCard.important == true">Important</h6>
         <h5 class="card-text text-center fs-2" *ngIf="!descriptionBool">{{ currentCard.term }}</h5> 
         <h5 class="card-text text-center fs-2" *ngIf="descriptionBool">{{ currentCard.description }}</h5>
       </div>
