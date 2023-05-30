@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CardCategory } from 'src/app/models/cardCategory.model';
 import { CardsService } from 'src/app/services/cards.service';
 
 @Component({
@@ -9,8 +10,10 @@ import { CardsService } from 'src/app/services/cards.service';
 })
 export class AddCardCategoryComponent {
   
-  cardId: number = 1;
-  categoryId: number = 1;
+  cardCategoryRequest: CardCategory = {
+    cardId: 1,
+    categoryId: 1
+  };
   
   constructor(private cardsService: CardsService, private route: ActivatedRoute, private router: Router) { }
 
@@ -20,14 +23,15 @@ export class AddCardCategoryComponent {
         const cardId = params.get('cardId');
 
         if(cardId) {
-          this.cardId = parseInt(cardId);
+          this.cardCategoryRequest.cardId = parseInt(cardId);
         }
       }
     })
   }
 
   addCardCategory() {
-    this.cardsService.addCardCategory(this.cardId, this.categoryId)
+    console.log(this.cardCategoryRequest);
+    this.cardsService.addCardCategory(this.cardCategoryRequest)
     .subscribe({
       next:(request) => { }
     });

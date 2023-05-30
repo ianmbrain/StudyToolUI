@@ -5,11 +5,11 @@
             <form #form="ngForm" (ngSubmit)="addCardCategory()">
                 <div class="mb-3">
                   <label for="CardId" class="form-label">Card Id</label>
-                  <input type="number" class="form-control" id="CardId" name="CardId" [(ngModel)] = "cardId">
+                  <input type="number" class="form-control" id="CardId" name="CardId" [(ngModel)] = "cardCategoryRequest.cardId">
                 </div>
                 <div class="mb-3">
                     <label for="categoryId" class="form-label">Category Id</label>
-                    <input type="number" class="form-control" id="categoryId" name="categoryId" [(ngModel)] = "categoryId">
+                    <input type="number" class="form-control" id="categoryId" name="categoryId" [(ngModel)] = "cardCategoryRequest.categoryId">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Add Category</button>
