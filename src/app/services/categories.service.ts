@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
 import { Category } from 'src/app/models/category.model';
+import { Card } from '../models/card.model';
 
 @Injectable({
   providedIn: 'root'
@@ -31,5 +32,9 @@ export class CategoriesService {
 
   deleteCategory(id: number | undefined) {
     return this.http.delete(this.baseApiUrl + '/api/category/' + id);
+  }
+
+  getCategoryCards(id: number | undefined): Observable<Card[]> {
+    return this.http.get<Card[]>(this.baseApiUrl + '/api/category/card' + id);
   }
 }

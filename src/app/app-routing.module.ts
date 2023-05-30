@@ -12,6 +12,7 @@ import { EditCardComponent } from './components/cards/edit-card/edit-card.compon
 import { DeckCardsComponent } from './components/decks/deck-cards/deck-cards.component';
 import { AddDeckCardComponent } from './components/decks/add-deck-card/add-deck-card.component';
 import { CardStudyComponent } from './components/cards/card-study/card-study.component';
+import { CategoryCardsComponent } from './components/categories/category-cards/category-cards.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,10 @@ const routes: Routes = [
   {
     path: 'categories/edit/:id',
     component: EditCategoryComponent
+  },
+  {
+    path: 'categories/card/:id',
+    component: CategoryCardsComponent
   },
   {
     path: 'cards',

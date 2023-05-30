@@ -7,6 +7,7 @@
             <th scope="col">Name</th>
             <th scope="col">Color</th>
             <th> </th>
+            <th> </th>
           </tr>
         </thead>
         <tbody>
@@ -15,6 +16,7 @@
                 <td>{{ category.name }}</td>
                 <td>{{ category.color }}</td>
                 <td><a [routerLink]="['/categories', 'edit', category.id]">Edit</a></td>
+                <td><a [routerLink]="['/categories', 'card', category.id]">Cards</a></td>
             </tr>
         </tbody>
       </table>
