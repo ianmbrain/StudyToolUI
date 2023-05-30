@@ -35,6 +35,6 @@ export class CategoriesService {
   }
 
   getCategoryCards(id: number | undefined): Observable<Card[]> {
-    return this.http.get<Card[]>(this.baseApiUrl + '/api/category/card' + id);
+    return this.http.get<Card[]>(this.baseApiUrl + '/api/category/card/' + id);
   }
 }
