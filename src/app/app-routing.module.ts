@@ -13,6 +13,7 @@ import { DeckCardsComponent } from './components/decks/deck-cards/deck-cards.com
 import { AddDeckCardComponent } from './components/decks/add-deck-card/add-deck-card.component';
 import { CardStudyComponent } from './components/cards/card-study/card-study.component';
 import { CategoryCardsComponent } from './components/categories/category-cards/category-cards.component';
+import { AddCardCategoryComponent } from './components/cards/add-card-category/add-card-category.component';
 
 const routes: Routes = [
   {
@@ -71,6 +72,10 @@ const routes: Routes = [
     path: 'cards/study/:deckId',
     component: CardStudyComponent
   },
+  {
+    path: 'cards/addCategory/:cardId',
+    component: AddCardCategoryComponent
+  }
 ];
 
 @NgModule({

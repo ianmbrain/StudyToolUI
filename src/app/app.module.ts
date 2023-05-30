@@ -18,6 +18,7 @@ import { DeckCardsComponent } from './components/decks/deck-cards/deck-cards.com
 import { AddDeckCardComponent } from './components/decks/add-deck-card/add-deck-card.component';
 import { CardStudyComponent } from './components/cards/card-study/card-study.component';
 import { CategoryCardsComponent } from './components/categories/category-cards/category-cards.component';
+import { AddCardCategoryComponent } from './components/cards/add-card-category/add-card-category.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CategoryCardsComponent } from './components/categories/category-cards/c
     DeckCardsComponent,
     AddDeckCardComponent,
     CardStudyComponent,
-    CategoryCardsComponent
+    CategoryCardsComponent,
+    AddCardCategoryComponent
   ],
   imports: [
     BrowserModule,

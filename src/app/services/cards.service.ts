@@ -32,4 +32,8 @@ export class CardsService {
   deleteCard(id: number | undefined) {
     return this.http.delete(this.baseApiUrl + '/api/card/' + id);
   }
+
+  addCardCategory(cardId: number, categoryId: number) {
+    return this.http.delete(this.baseApiUrl + '/api/card/CreateCard/' + cardId + '&categoryId=' + categoryId);
+  }
 }
