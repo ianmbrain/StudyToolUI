@@ -1,20 +1,34 @@
-#cardGrid {
-    margin-left: 16%;
-    margin-bottom: 10%;
-}
-
-#deckCard {
-    width: 400px;
-    height: 500px;
-}
-
 #cardBackground {
     background: rgba(13, 110, 253, 0.1);
 }
 
+.container {
+    margin: auto;
+    max-width: 50%;
+    margin-top: 5%;
+}
+
+.card-header {
+    
+}
+
+#card-body {
+    margin: auto;
+    height: 400px;
+    width: 500px;
+}
+
+#card-text {
+    margin-top: 20%;
+}
+
+#controlContainer {
+    margin: auto;
+    width: 160px;
+}
+
 #cardHeader {
-    text-align: right;
-    display: inline-block;
+
 }
 
 #btnContainer {
@@ -24,11 +38,19 @@
 }
 
 #nextCardBtn {
-    width: 100px;
+    width: 50px;
+    display: inline-block;
+}
+
+#cardCounter {
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #prevCardBtn {
-    width: 100px;
+    width: 50px;
+    display: inline-block;
 }
 
 #flipCardBtn {

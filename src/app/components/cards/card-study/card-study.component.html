@@ -1,4 +1,22 @@
-<div id="cardGrid" class="container">
+<div class="container">
+  <div id="card-body" class="card">
+    <div class="card-body">
+      <a id="flipCardBtn" (click)="flipCard()">
+        <h2 id="card-text" class="card-text text-center fs-2" *ngIf="!descriptionBool">{{ currentCard.term }}</h2> 
+        <h2 id="card-text" class="card-text text-center fs-2" *ngIf="descriptionBool">{{ currentCard.description }}</h2>
+      </a>
+    </div>
+    <div class="card-header">
+      <div id="controlContainer">
+        <a id="prevCardBtn" (click)="prevItem()" class="btn btn-primary "><</a>
+        <h5 id="cardCounter" class="card-title">{{currentIndex + 1}}/{{cards.length}}</h5>
+        <a id="prevCardBtn" (click)="nextItem()" class="btn btn-primary">></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<div id="cardGrid" class="container">
     <h1 class="my-3">Cards</h1>
     <div id="deckCard" class="card">
       <h5 id="cardHeader" ngClass="card-header text-white" [ngStyle]="{'background-color': currentCard.important ? 'rgba(240, 173, 78, 1)' : 'rgba(13, 110, 253, 1)'}">Card: {{currentIndex + 1}}/{{cards.length}}</h5>
@@ -18,4 +36,4 @@
         </div>
       </div>
     </div>
-</div>
+</div>-->

@@ -3,11 +3,6 @@
     max-width: 60%;
 }
 
-#deckCard {
-    max-width: 275px;
-    height: 250px;
-}
-
 #cardBackground {
     background: rgba(13, 110, 253, 0.1);
 }
@@ -15,4 +10,5 @@
 #editCardBtn {
     margin-right: 1%;
 }
+
 
