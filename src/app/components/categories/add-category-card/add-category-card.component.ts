@@ -28,6 +28,7 @@ export class AddCategoryCardComponent {
 
         if(categoryId) {
           this.categoryId = parseInt(categoryId);
+          console.log(categoryId);
         }
       }
     })
