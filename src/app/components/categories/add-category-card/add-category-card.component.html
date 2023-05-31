@@ -1,0 +1,31 @@
+<div class="container my-5">
+    <h1 class="mb-3">Create New Card</h1>
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="addCard()">
+                <div class="mb-3">
+                  <label for="term" class="form-label">Term</label>
+                  <input type="text" class="form-control" id="term" name="term" [(ngModel)] = "addCardRequest.term">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="description" name="description" [(ngModel)] = "addCardRequest.description">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="important">Important</label>
+                    <select class="form-select" id="important" type="boolean" name="important" [(ngModel)] = "addCardRequest.important">
+                      <option selected>Choose...</option>
+                      <option [ngValue]=false>False</option>
+                      <option [ngValue]=true>True</option>
+                    </select>
+                  </div>
+                <div class="mb-3">
+                  <label for="deck" class="form-label">Deck</label>
+                  <input type="number" class="form-control" id="deck" name="deck" [(ngModel)] = "deckId">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Create Card</button>
+              </form>
+        </div>
+    </div>
+</div>

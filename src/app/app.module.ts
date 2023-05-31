@@ -20,6 +20,7 @@ import { CardStudyComponent } from './components/cards/card-study/card-study.com
 import { CategoryCardsComponent } from './components/categories/category-cards/category-cards.component';
 import { AddCardCategoryComponent } from './components/cards/add-card-category/add-card-category.component';
 import { CardCategoriesComponent } from './components/cards/card-categories/card-categories.component';
+import { AddCategoryCardComponent } from './components/categories/add-category-card/add-category-card.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CardCategoriesComponent } from './components/cards/card-categories/card
     CardStudyComponent,
     CategoryCardsComponent,
     AddCardCategoryComponent,
-    CardCategoriesComponent
+    CardCategoriesComponent,
+    AddCategoryCardComponent
   ],
   imports: [
     BrowserModule,
