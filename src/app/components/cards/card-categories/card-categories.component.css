@@ -1,0 +1,27 @@
+#deckDiv {
+    width: 800px;
+    max-width: 80%;
+    margin-left: 10%;
+}
+
+#deckTitleDiv {
+    width: 800px;
+    max-width: 80%;
+    margin-left: 10%;
+}
+
+#addDeckBtn {
+    margin-left: 10%;
+}
+
+#editDeckBtn {
+    margin-right: 5px;
+}
+
+#studyDeckBtn {
+    float: right;
+}
+
+#deckCardBackground {
+    background: rgba(13, 110, 253, 0.1);
+}

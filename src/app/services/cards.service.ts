@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
 import { Card } from 'src/app/models/card.model';
 import { CardCategory } from '../models/cardCategory.model';
+import { Category } from '../models/category.model';
 
 @Injectable({
   providedIn: 'root'
@@ -38,7 +39,7 @@ export class CardsService {
     return this.http.post(this.baseApiUrl + '/CreateCard?cardId=' + cardId + '&categoryId=' + categoryId, {});
   }
 
-  getCategoriesByCard(cardId: number) {
-    return this.http.post(this.baseApiUrl + '/api/card/categories?deckId=' + cardId, {});
+  getCategoriesByCard(cardId: number): Observable<Category[]> {
+    return this.http.get<Category[]>(this.baseApiUrl + '/api/Card/Categories/' + cardId);
   }
 }

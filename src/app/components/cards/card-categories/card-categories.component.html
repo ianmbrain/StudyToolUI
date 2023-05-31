@@ -1,1 +1,14 @@
-<p>card-categories works!</p>
+<div class="container">
+    <h1 id="deckTitleDiv" class="my-3">Categories</h1>
+    <div *ngFor="let category of categories">
+      <div class="card mb-3" id="deckDiv">
+        <div class="card-header bg-primary text-white">
+          Category Id: {{ category.id }}
+        </div>
+        <div id="deckCardBackground" class="card-body">
+          <h5 class="card-title">{{ category.name }}</h5>
+          <p class="card-text">Color Id: {{ category.color }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
