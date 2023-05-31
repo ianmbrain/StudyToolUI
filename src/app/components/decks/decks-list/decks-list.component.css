@@ -1,17 +1,18 @@
+.container {
+    margin: auto;
+    max-width: 50%;
+}
+
 #deckDiv {
-    width: 800px;
-    max-width: 80%;
-    margin-left: 10%;
+    margin: auto;
 }
 
 #deckTitleDiv {
-    width: 800px;
-    max-width: 80%;
-    margin-left: 10%;
+    margin: auto;
 }
 
 #addDeckBtn {
-    margin-left: 10%;
+    margin: auto;
 }
 
 #editDeckBtn {
