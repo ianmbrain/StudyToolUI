@@ -10,10 +10,8 @@ import { CardsService } from 'src/app/services/cards.service';
 })
 export class AddCardCategoryComponent {
   
-  cardCategoryRequest: CardCategory = {
-    cardId: 1,
-    categoryId: 1
-  };
+  cardId: number = 1;
+  categoryId: number = 1;
   
   constructor(private cardsService: CardsService, private route: ActivatedRoute, private router: Router) { }
 
@@ -23,15 +21,14 @@ export class AddCardCategoryComponent {
         const cardId = params.get('cardId');
 
         if(cardId) {
-          this.cardCategoryRequest.cardId = parseInt(cardId);
+          this.cardId = parseInt(cardId);
         }
       }
     })
   }
 
   addCardCategory() {
-    console.log(this.cardCategoryRequest);
-    this.cardsService.addCardCategory(this.cardCategoryRequest)
+    this.cardsService.addCardCategory(this.cardId, this.categoryId)
     .subscribe({
       next:(request) => { }
     });

@@ -34,7 +34,7 @@ export class CardsService {
     return this.http.delete(this.baseApiUrl + '/api/card/' + id);
   }
 
-  addCardCategory(cardCategoryRequest: CardCategory) {
-    return this.http.post(this.baseApiUrl + '/CreateCard', cardCategoryRequest);
+  addCardCategory(cardId: number, categoryId: number) {
+    return this.http.post(this.baseApiUrl + '/CreateCard?cardId=' + cardId + '&categoryId=' + categoryId, {});
   }
 }
