@@ -11,15 +11,14 @@ import { DecksService } from 'src/app/services/decks.service';
 export class CardStudyComponent {
   
   cards: Card[] = [];
-  currentIndex: number = -1;
-  currentCard: Card;
+  currentIndex: number = 0;
+  currentCard: Card = this.cards[-1];
 
   descriptionBool: boolean = false;
 
   deckCardId: Number = 0;
 
   constructor(private decksService: DecksService, private route: ActivatedRoute,) {
-    this.currentCard = this.cards[this.currentIndex];
   }
 
   ngOnInit(): void {
@@ -34,6 +33,7 @@ export class CardStudyComponent {
           .subscribe({
             next: (cards) => {
               this.cards = cards;
+              this.currentCard = cards[0];
             }
           })
         }
@@ -50,7 +50,7 @@ export class CardStudyComponent {
   }
 
   prevItem() {
-    if (this.currentIndex >= 0) {
+    if (this.currentIndex >= 1) {
       this.currentIndex--;
       this.descriptionBool = false;
       this.currentCard = this.cards[this.currentIndex];
