@@ -11,3 +11,8 @@
 #cardBackground {
     background: rgba(13, 110, 253, 0.1);
 }
+
+#editCardBtn {
+    margin-right: 1%;
+}
+
