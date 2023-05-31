@@ -1,29 +1,25 @@
 <div class="container my-5">
     <h1 class="mb-3">Create New Category</h1>
-    <div class="row">
-        <div class="col-6">
-            <form #form="ngForm" (ngSubmit)="addCategory()">
-                <div class="mb-3">
-                  <label for="name" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="name" name="name" [(ngModel)] = "addCategoryRequest.name">
-                </div>
-                <!--<div class="mb-3">
-                    <label for="color" class="form-label">Color</label>
-                    <input type="number" class="form-control" id="color" name="color" [(ngModel)] = "addCategoryRequest.color">
-                  </div>-->
-                <div class="mb-3">
-                  <label class="form-label" for="color">Color</label>
-                  <select class="form-select" id="color" type="number" name="color" [(ngModel)] = "addCategoryRequest.color">
-                    <option selected>Choose...</option>
-                    <option [ngValue]=0>Red</option>
-                    <option [ngValue]=1>Green</option>
-                    <option [ngValue]=2>Blue</option>
-                    <option [ngValue]=3>Yellow</option>
-                    <option [ngValue]=4>Orange</option>
-                  </select>
-                </div>
-                <button type="submit" class="btn btn-primary">Create Category</button>
-              </form>
-        </div>
-    </div>
+      <form #form="ngForm" (ngSubmit)="addCategory()">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)] = "addCategoryRequest.name">
+          </div>
+          <!--<div class="mb-3">
+              <label for="color" class="form-label">Color</label>
+              <input type="number" class="form-control" id="color" name="color" [(ngModel)] = "addCategoryRequest.color">
+            </div>-->
+          <div class="mb-3">
+            <label class="form-label" for="color">Color</label>
+            <select class="form-select" id="color" type="number" name="color" [(ngModel)] = "addCategoryRequest.color">
+              <option selected>Choose...</option>
+              <option [ngValue]=0>Red</option>
+              <option [ngValue]=1>Green</option>
+              <option [ngValue]=2>Blue</option>
+              <option [ngValue]=3>Yellow</option>
+              <option [ngValue]=4>Orange</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Create Category</button>
+        </form>
 </div>
