@@ -1,13 +1,11 @@
-#deckDiv {
-    width: 800px;
-    max-width: 80%;
-    margin-left: 10%;
+.container {
+    margin: auto;
+    max-width: 50%;
 }
 
 #deckTitleDiv {
     width: 800px;
     max-width: 80%;
-    margin-left: 10%;
 }
 
 #deleteCategoryBtn {
