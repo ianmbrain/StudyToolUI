@@ -1,19 +1,15 @@
 <div class="container my-5">
     <h1 class="mb-3">Edit Deck</h1>
-    <div class="row">
-        <div class="col-6">
-            <form #form="ngForm" (ngSubmit)="updateDeck()">
-                <div class="mb-3">
-                  <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="title" name="title" [(ngModel)] = "deckDetails.title">
-                </div>
-                <div class="mb-3">
-                    <label for="description" class="form-label">Description</label>
-                    <input type="text" class="form-control" id="description" name="description" [(ngModel)] = "deckDetails.description">
-                  </div>
-                <button type="submit" class="btn btn-primary">Save</button>
-                <button type="submit" class="btn btn-danger" (click)="deleteDeck(deckDetails.id)">Delete</button>
-              </form>
-        </div>
-    </div>
+      <form #form="ngForm" (ngSubmit)="updateDeck()">
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" [(ngModel)] = "deckDetails.title">
+          </div>
+          <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <input type="text" class="form-control" id="description" name="description" [(ngModel)] = "deckDetails.description">
+            </div>
+          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="submit" class="btn btn-danger" (click)="deleteDeck(deckDetails.id)">Delete</button>
+        </form>
 </div>
