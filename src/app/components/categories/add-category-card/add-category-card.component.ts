@@ -39,6 +39,6 @@ export class AddCategoryCardComponent {
       next:(request) => { }
     });
 
-    this.router.navigate(['/categories/cards', this.categoryId]);
+    this.router.navigate(['/categories/card', this.categoryId]);
   }
 }

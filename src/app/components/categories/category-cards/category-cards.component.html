@@ -1,6 +1,6 @@
 <div id="cardGrid">
   <h1 class="my-3">Cards</h1>
-  <a id="addDeckBtn" [routerLink]="['/cards', 'add']" class="btn btn-primary btn-lg mb-3">Add Card</a>
+  <a id="addDeckBtn" [routerLink]="['/categories/cards', 'add']" class="btn btn-primary btn-lg mb-3">Add Card</a>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col" *ngFor="let card of cards">
       <div class="card h-100">
