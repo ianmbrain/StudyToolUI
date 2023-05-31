@@ -44,6 +44,6 @@ export class CardsService {
   }
 
   deleteCardCategory(cardId: number, categoryId: number | undefined) {
-    return this.http.delete(this.baseApiUrl + '/api/card/DeleteCardCategory?cardId' + cardId + '&categoryId=' + categoryId);
+    return this.http.delete(this.baseApiUrl + '/api/Card/DeleteCardCategory?cardId=' + cardId + '&categoryId=' + categoryId);
   }
 }
