@@ -10,16 +10,12 @@
     margin-left: 10%;
 }
 
-#addDeckBtn {
-    margin-left: 10%;
+#deleteCategoryBtn {
+    float: right;
 }
 
 #editDeckBtn {
     margin-right: 5px;
-}
-
-#studyDeckBtn {
-    float: right;
 }
 
 #deckCardBackground {

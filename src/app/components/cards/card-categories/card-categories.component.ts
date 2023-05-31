@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Category } from 'src/app/models/category.model';
 import { CardsService } from 'src/app/services/cards.service';
 
@@ -12,7 +12,9 @@ export class CardCategoriesComponent {
   
   categories: Category[] = [];
 
-  constructor(private cardsService: CardsService, private route: ActivatedRoute) {
+  cardId: number = 1;
+
+  constructor(private cardsService: CardsService, private route: ActivatedRoute, private router: Router) {
 
   }
 
@@ -22,6 +24,7 @@ export class CardCategoriesComponent {
         const id = params.get('cardId');
 
         if(id) {
+          this.cardId = parseInt(id);
           this.cardsService.getCategoriesByCard(parseInt(id))
           .subscribe({
             next: (response) => {
@@ -30,6 +33,15 @@ export class CardCategoriesComponent {
             }
           })
         }
+      }
+    })
+  }
+
+  deleteCardCategory(categoryId: number | undefined) {
+    this.cardsService.deleteCardCategory(this.cardId, categoryId)
+    .subscribe({
+      next: (respones) => {
+        this.router.navigate(['cards']);
       }
     })
   }

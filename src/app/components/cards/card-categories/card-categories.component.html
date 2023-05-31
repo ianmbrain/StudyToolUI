@@ -4,6 +4,7 @@
       <div class="card mb-3" id="deckDiv">
         <div class="card-header bg-primary text-white">
           Category Id: {{ category.id }}
+          <a id="deleteCategoryBtn" (click)="deleteCardCategory(category.id)"  class="btn btn-light">Delete</a>
         </div>
         <div id="deckCardBackground" class="card-body">
           <h5 class="card-title">{{ category.name }}</h5>

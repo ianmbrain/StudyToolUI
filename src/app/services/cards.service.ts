@@ -42,4 +42,8 @@ export class CardsService {
   getCategoriesByCard(cardId: number): Observable<Category[]> {
     return this.http.get<Category[]>(this.baseApiUrl + '/api/Card/Categories/' + cardId);
   }
+
+  deleteCardCategory(cardId: number, categoryId: number | undefined) {
+    return this.http.delete(this.baseApiUrl + '/api/card/DeleteCardCategory?cardId' + cardId + '&categoryId=' + categoryId);
+  }
 }
